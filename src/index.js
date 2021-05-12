@@ -25,6 +25,7 @@ app.router(require('./router').default);
 
 // 5. Start
 app.start('#root');
+app.router(require('./pages/Button-benny').default);
 
 // 6. 模拟model 
 app.model(require('./models/products').default);
