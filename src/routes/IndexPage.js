@@ -12,24 +12,29 @@ class IndexPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalVisible: false,
+      // 控制 Modal 的 visible
+      isModalVisible: false,   
+      // 控制 Drawer 的 visible
       visible: false,
     };
   }
+  // 展开Modal
   showModal = () => {
     this.setState({ isModalVisible: true });
   };
-
+  // 确定Modal
   handleOk = () => {
     this.setState({ isModalVisible: false });
   };
-
+  // 关闭Modal
   handleCancel = () => {
     this.setState({ isModalVisible: false });
   };
+  // 展开Drawer 
   showDrawer = () => {
     this.setState({ visible: true });
   };
+  // 关闭Drawer 
   onClose = () => {
     this.setState({ visible: false });
   };
@@ -47,7 +52,7 @@ class IndexPage extends Component {
         <Layout>
           <Sider breakpoint="lg" collapsedWidth="80">
             <div className="logo" />
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} style={{marginTop:50}}>
+            <Menu theme="dark" mode="inline"  style={{marginTop:50}}>
               <Menu.Item key="1" icon={<UserOutlined />}>测试界面 1</Menu.Item>
               <Menu.Item key="2" icon={<VideoCameraOutlined />}>测试界面 2</Menu.Item>
             </Menu>
